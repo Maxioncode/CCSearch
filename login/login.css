@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6edf1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeInSmooth 0.6s ease-in-out;
+  border-left: none;
+  border-right: none;
+}
+
+/* Background Image */
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../image/background.jpg") center center / cover no-repeat;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Left Section */
+.left-section {
+  width: 40%;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  border-right: 1.5px solid #dcdcdc;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.form-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 210px;
+  display: block;
+  margin: 20px 60px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  font-size: 14px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .toggle {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button {
+  width: 347px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+button:hover {
+  background-color: #004c99;
+}
+
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  margin: 10px auto 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.remember-me input {
+  width: 10px;
+  height: 10px;
+  accent-color: #0066cc;
+}
+
+.forgot-pass {
+  color: #0066cc;
+  font-size: 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.forgot-pass:hover {
+  text-decoration: underline;
+}
+
+/* Right Section */
+.right-section {
+  width: 90%;
+  position: relative;
+  background: rgb(182, 180, 180) url("../image/CC_BUILDING.jpg") no-repeat center center / cover;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: 100% 1%;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.quote {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 2;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Georgia", serif !important;
+  animation: slideUp 1s ease-in-out;
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 210px;
+  height: 200px;
+  position: relative;
+  pointer-events: auto;
+  margin: auto;
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 8px 12px 0;
+  text-align: right;
+}
+
+.close-modal {
+  font-size: 20px;
+  font-weight: 500;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+.modal-body {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.modal-icon {
+  margin-bottom: 8px;
+}
+
+.modal-icon .fas {
+  font-size: 32px;
+}
+
+.modal-body h3 {
+  margin: 5px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-body p {
+  margin: 5px 0 8px;
+  color: #666;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+.modal-footer {
+  padding: 0 12px 12px;
+  text-align: center;
+}
+
+.modal-btn {
+  background-color: #0066cc;
+  color: white;
+  margin-top: -5px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 65%;
+}
+
+.modal-btn:hover {
+  background-color: #004c99;
+}
+
+/* Success Modal */
+.modal.success .modal-icon .fas {
+  color: #28a745;
+}
+
+.modal.success .modal-btn {
+  background-color: #28a745;
+}
+
+.modal.success .modal-btn:hover {
+  background-color: #218838;
+}
+
+/* Error Modal */
+.modal.error .modal-icon .fas {
+  color: #dc3545;
+}
+
+.modal.error .modal-btn {
+  background-color: #dc3545;
+}
+
+.modal.error .modal-btn:hover {
+  background-color: #c82333;
+}
+
+/* Mobile Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-width: 190px;
+    height: 120px;
+    margin: 20px auto;
+  }
+
+  .modal-body h3 {
+    font-size: 12px;
+  }
+
+  .modal-icon .fas {
+    font-size: 28px;
+  }
+
+  .modal-body p {
+    font-size: 11px;
+  }
+
+  .modal-btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .modal {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .right-section {
+    display: none;
+  }
+}

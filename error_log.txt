@@ -1,0 +1,25 @@
+[17-Dec-2025 16:51:04 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`research_repository`.`registration`, CONSTRAINT `fk_registration_student` FOREIGN KEY (`studentID`) REFERENCES `student_information` (`studentID`) ON DELETE CASCADE) in C:\xampp\htdocs\CCsearch\register\registration.php:129
+Stack trace:
+#0 C:\xampp\htdocs\CCsearch\register\registration.php(129): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\CCsearch\register\registration.php on line 129
+[17-Dec-2025 16:51:23 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`research_repository`.`registration`, CONSTRAINT `fk_registration_student` FOREIGN KEY (`studentID`) REFERENCES `student_information` (`studentID`) ON DELETE CASCADE) in C:\xampp\htdocs\CCsearch\register\registration.php:129
+Stack trace:
+#0 C:\xampp\htdocs\CCsearch\register\registration.php(129): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\CCsearch\register\registration.php on line 129
+[17-Dec-2025 16:53:07 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`research_repository`.`registration`, CONSTRAINT `fk_registration_student` FOREIGN KEY (`studentID`) REFERENCES `student_information` (`studentID`) ON DELETE CASCADE) in C:\xampp\htdocs\CCsearch\register\registration.php:129
+Stack trace:
+#0 C:\xampp\htdocs\CCsearch\register\registration.php(129): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\CCsearch\register\registration.php on line 129
+[17-Dec-2025 16:54:02 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`research_repository`.`registration`, CONSTRAINT `fk_registration_student` FOREIGN KEY (`studentID`) REFERENCES `student_information` (`studentID`) ON DELETE CASCADE) in C:\xampp\htdocs\CCsearch\register\registration.php:129
+Stack trace:
+#0 C:\xampp\htdocs\CCsearch\register\registration.php(129): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\CCsearch\register\registration.php on line 129
+[17-Dec-2025 16:54:58 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`research_repository`.`registration`, CONSTRAINT `fk_registration_student` FOREIGN KEY (`studentID`) REFERENCES `student_information` (`studentID`) ON DELETE CASCADE) in C:\xampp\htdocs\CCsearch\register\registration.php:129
+Stack trace:
+#0 C:\xampp\htdocs\CCsearch\register\registration.php(129): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\CCsearch\register\registration.php on line 129

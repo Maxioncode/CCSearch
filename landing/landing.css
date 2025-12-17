@@ -1,0 +1,182 @@
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==== BACKGROUND ==== */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../image/background.jpg") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+  display: flex;
+  width: 950px;
+  height: 540px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.9s ease;
+}
+
+/* ==== LEFT SECTION ==== */
+.left-section {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.logo {
+  width: 359px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* ==== BUTTONS ==== */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.btn {
+  width: 230px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: linear-gradient(135deg, #0078ff, #004aad);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 74, 173, 0.4);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #005ed1, #00378b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.5);
+}
+
+
+/* SIGN UP BUTTON */
+.signup-btn {
+  background: transparent;
+  color: #004aad;
+  border: 2px solid #004aad;
+  font-weight: 600;
+}
+
+.signup-btn:hover {
+  background: #004aad;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.3);
+}
+
+/* ==== RIGHT SECTION ==== */
+.right-section {
+  flex: 1.2;
+  background: url("../image/CC_BUILDING.jpg") center/cover no-repeat;
+  background-size: 108%; /* zoom to remove grey edges */
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.quote {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  z-index: 2;
+  font-size: 22px;
+  line-height: 1.4;
+  font-family: "Georgia", serif;
+  animation: slideUp 1s ease;
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .right-section {
+    height: 250px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+}
